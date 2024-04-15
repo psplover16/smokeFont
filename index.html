@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            background-color: black;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        span {
+            display: inline-block;
+            color: whitesmoke;
+            font-size: 5rem;
+            /*  */
+            text-shadow: 0px 0px 0px whitesmoke;
+            /* offsetX  offsetY  blueRadius */
+            animation: smoky 5s both;
+        }
+
+span:nth-child(even){
+  /* animation-name: smoky-mirror; */
+}
+        @keyframes smoky {
+            60% {
+                text-shadow: 0 0 40px whitesmoke;
+            }
+
+            to {
+                transform:
+                    translate3d(15rem, -8rem, 0) rotate(-40deg) skewX(70deg) scale(1.5);
+                text-shadow: 0 0 20px whitesmoke;
+                opacity: 0;
+            }
+        }
+
+        @keyframes smoky-mirror {
+            60% {
+                text-shadow: 0 0 40px whitesmoke;
+            }
+
+            to {
+                transform:
+                    translate3d(18rem, -8rem, 0) rotate(-40deg) skewX(-70deg) scale(2);
+                text-shadow: 0 0 20px whitesmoke;
+                opacity: 0;
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <span>C</span>
+        <span>S</span>
+        <span>S</span>
+        <span>&nbsp;</span>
+        <span>S</span>
+        <span>M</span>
+        <span>O</span>
+        <span>K</span>
+        <span>E</span>
+        <span>Y</span>
+    </div>
+</body>
+
+</html>
